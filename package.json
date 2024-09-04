@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "aws s3 sync --delete dist s3://jbrowse.org/demos/app-vite/",
-    "postdeploy": "aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-vite/*\""
+    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-vite/*\""
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.2",
