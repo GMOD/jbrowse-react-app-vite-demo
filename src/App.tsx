@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
 import { createViewState, JBrowseApp } from '@jbrowse/react-app'
 // @ts-expect-error no font types
 import '@fontsource/roboto'
@@ -26,8 +25,6 @@ function View() {
         },
       },
 
-      hydrateFn: hydrateRoot,
-      createRootFn: createRoot,
       makeWorkerInstance: () => {
         return new Worker(new URL('./rpcWorker', import.meta.url), {
           type: 'module',
