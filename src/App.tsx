@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { createViewState, JBrowseApp } from '@jbrowse/react-app'
+import { createViewState, JBrowseApp } from '@jbrowse/react-app2'
 // @ts-expect-error no font types
 import '@fontsource/roboto'
 
