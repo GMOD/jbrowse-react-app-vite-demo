@@ -16,20 +16,19 @@ function View() {
       config: {
         ...config,
 
-        // remove this and the makeWorkerInstance if you do not want to use web
-        // workers
-        configuration: {
-          rpc: {
-            defaultDriver: 'WebWorkerRpcDriver',
-          },
-        },
+        // note: workers not working in dev mode currently, planning on workaround soon
+        // configuration: {
+        //   rpc: {
+        //     defaultDriver: 'WebWorkerRpcDriver',
+        //   },
+        // },
       },
 
-      makeWorkerInstance: () => {
-        return new Worker(new URL('./rpcWorker', import.meta.url), {
-          type: 'module',
-        })
-      },
+      // makeWorkerInstance: () => {
+      //   return new Worker(new URL('./rpcWorker', import.meta.url), {
+      //     type: 'module',
+      //   })
+      // },
     })
     setViewState(state)
   }, [])
