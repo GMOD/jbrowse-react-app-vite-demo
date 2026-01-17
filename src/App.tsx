@@ -15,20 +15,7 @@ function View() {
     const state = createViewState({
       config: {
         ...config,
-
-        // note: workers not working in dev mode currently, planning on workaround soon
-        // configuration: {
-        //   rpc: {
-        //     defaultDriver: 'WebWorkerRpcDriver',
-        //   },
-        // },
       },
-
-      // makeWorkerInstance: () => {
-      //   return new Worker(new URL('./rpcWorker', import.meta.url), {
-      //     type: 'module',
-      //   })
-      // },
     })
     setViewState(state)
   }, [])
