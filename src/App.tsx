@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-// @ts-expect-error no types for font
 import '@fontsource/roboto'
 import { JBrowseApp, useCreateViewState } from '@jbrowse/react-app2'
 import '@jbrowse/react-app2/styles.css'

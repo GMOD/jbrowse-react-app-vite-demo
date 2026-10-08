@@ -1,0 +1,12 @@
+# pnpm reads its settings from this file; the project is one package.
+blockExoticSubdeps: true
+minimumReleaseAge: '1440'
+minimumReleaseAgeExclude:
+  - '@jbrowse/*'
+  - '@gmod/*'
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  '@parcel/watcher': true
+  core-js: false

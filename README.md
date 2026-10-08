@@ -7,11 +7,11 @@ See it running at https://jbrowse.org/demos/app-vite/.
 ## Usage
 
 ```bash
-yarn
-yarn dev
+pnpm install
+pnpm dev
 ```
 
-`yarn build` writes a static site.
+`pnpm build` writes a static site.
 
 More examples: https://jbrowse.org/storybook/, and the
 [embedding guide](https://jbrowse.org/jb2/docs/embedded_components/).

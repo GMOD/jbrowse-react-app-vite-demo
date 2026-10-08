@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "aws s3 sync --delete dist s3://jbrowse.org/demos/app-vite/",
-    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-vite/*\"",
+    "deploy": "pnpm build && aws s3 sync --delete dist s3://jbrowse.org/demos/app-vite/ && AWS_PAGER=\"\" aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-vite/*\"",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -33,5 +31,6 @@
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.57.0",
     "vite": "^8.0.0"
-  }
+  },
+  "packageManager": "pnpm@11.18.0"
 }
